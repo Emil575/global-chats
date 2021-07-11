@@ -7,7 +7,7 @@ let bot = client
 
 
 
-client.player = new Player(client);
+
 client.commands = new Discord.Collection();
 
 fs.readdirSync('./cmds').forEach(dirs => {
@@ -28,11 +28,7 @@ for (const file of events) {
     const event = require(`./events/${file}`);
     client.on(file.split(".")[0], event.bind(null, client));
 };
-for (const file of player) {
-    console.log(`Musik aktiviert: ${file}!`);
-    const event = require(`./player/${file}`);
-    client.player.on(file.split(".")[0], event.bind(null, client));
-};
+
 
 
 
