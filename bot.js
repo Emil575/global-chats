@@ -21,7 +21,7 @@ fs.readdirSync('./cmds').forEach(dirs => {
 });
 
 const events = fs.readdirSync('./events').filter(file => file.endsWith('.js'));
-const player = fs.readdirSync('./player').filter(file => file.endsWith('.js'));
+
 
 for (const file of events) {
     console.log(`Events werden geladen: ${file}!`);
